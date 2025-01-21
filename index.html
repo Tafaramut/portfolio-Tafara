@@ -5,59 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">My Portfolio</div>
-            <ul class="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+<body class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white">
+    <header class="bg-gray-900 p-4">
+        <nav class="flex justify-between items-center container mx-auto">
+            <div class="text-3xl font-bold">My Portfolio</div>
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="hover:text-yellow-400">About Me</a></li>
+                <li><a href="#projects" class="hover:text-yellow-400">Projects</a></li>
+                <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Hello, I'm <span>Your Name</span></h1>
-            <p>A passionate Computer Science Developer</p>
-            <a href="#projects" class="btn">View My Work</a>
+    <section id="hero" class="h-screen flex items-center justify-center text-center flex-col">
+        <div class="mb-6">
+            <img src="assets/profile.jpg" alt="Your Name" class="rounded-full w-40 h-40 object-cover mx-auto border-4 border-yellow-400 shadow-lg">
+        </div>
+        <div>
+            <h1 class="text-5xl font-bold mb-4">Hello, I'm <span class="text-yellow-400">Tafara J Mutsw</span></h1>
+            <p class="text-xl mb-6">A Passionate Computer Science Developer</p>
+            <a href="#projects" class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-full font-bold">View My Work</a>
+        </div>
+    </section>
+    
+
+    <section id="about" class="py-20 bg-white text-gray-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">About Me</h2>
+            <p class="text-xl">I'm a computer science developer with experience in building scalable and user-friendly applications. I specialize in full-stack development, chatbot integration, and AI solutions, with a passion for creating impactful tech solutions.</p>
         </div>
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Brief description of your background, skills, and what drives your passion for coding.</p>
-    </section>
+    <section id="projects" class="py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Projects</h2>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-list">
-            <div class="project-item">
-                <h3>Project Title 1</h3>
-                <p>Short description of the project.</p>
-                <a href="https://github.com/yourusername/project1" class="btn" target="_blank">View Project</a>
+            <!-- Project 1: CBZ WhatsApp Chatbot -->
+            <div class="bg-gray-800 p-8 rounded-lg mb-8 text-left">
+                <h3 class="text-2xl font-bold text-yellow-400">CBZ WhatsApp Chatbot</h3>
+                <p class="text-lg mt-2">A WhatsApp chatbot for CBZ clients to access information about services, submit complaints, and applications. Built with Twilio API, Node.js, and integrated with a robust backend for handling customer queries efficiently.</p>
+                <p><strong>Technologies:</strong> Twilio API, Node.js, MongoDB, Docker</p>
+                <a href="https://github.com/yourusername/cbz-whatsapp-chatbot" class="text-yellow-400 hover:underline" target="_blank">View Project</a>
             </div>
-            <div class="project-item">
-                <h3>Project Title 2</h3>
-                <p>Short description of the project.</p>
-                <a href="https://github.com/yourusername/project2" class="btn" target="_blank">View Project</a>
+
+            <!-- Project 2: FastCash Web -->
+            <div class="bg-gray-800 p-8 rounded-lg mb-8 text-left">
+                <h3 class="text-2xl font-bold text-yellow-400">FastCash Web App</h3>
+                <p class="text-lg mt-2">A web application that facilitates the creation and management of vouchers for money withdrawals and transfers. Developed with a focus on security and scalability, utilizing React for the frontend and Django for the backend.</p>
+                <p><strong>Technologies:</strong> React, Django, PostgreSQL, AWS</p>
+                <a href="https://github.com/yourusername/fastcash-web" class="text-yellow-400 hover:underline" target="_blank">View Project</a>
             </div>
-            <!-- Add more projects as needed -->
+
+            <!-- Project 3: Career Guidance WhatsApp Chatbot -->
+            <div class="bg-gray-800 p-8 rounded-lg mb-8 text-left">
+                <h3 class="text-2xl font-bold text-yellow-400">Career Guidance WhatsApp Chatbot</h3>
+                <p class="text-lg mt-2">A chatbot aimed at helping O-level and A-level students make informed decisions about their educational paths. It provides insights into various career options and necessary academic choices using AI-driven recommendations.</p>
+                <p><strong>Technologies:</strong> Dialogflow, Python, Firebase</p>
+                <a href="https://github.com/yourusername/career-guidance-chatbot" class="text-yellow-400 hover:underline" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 4: BlueFountain Farmers Mall -->
+            <div class="bg-gray-800 p-8 rounded-lg mb-8 text-left">
+                <h3 class="text-2xl font-bold text-yellow-400">BlueFountain Farmers Mall</h3>
+                <p class="text-lg mt-2">An e-commerce platform for farmers to sell their products online, integrated with WooCommerce. The platform is designed to make agricultural commerce more accessible to small-scale farmers.</p>
+                <p><strong>Technologies:</strong> WooCommerce, PHP, MySQL, Stripe API</p>
+                <a href="https://github.com/yourusername/bluefountain-farmers-mall" class="text-yellow-400 hover:underline" target="_blank">View Project</a>
+            </div>
+
+            <!-- More Projects -->
+            <div class="bg-gray-800 p-8 rounded-lg mb-8 text-left">
+                <h3 class="text-2xl font-bold text-yellow-400">Other Projects at KaribuTech AI</h3>
+                <p class="text-lg mt-2">Contributed to numerous innovative AI solutions at KaribuTech AI, ranging from predictive analytics tools to advanced machine learning models for various industries.</p>
+                <a href="https://github.com/yourusername/kaributech-ai-projects" class="text-yellow-400 hover:underline" target="_blank">View More Projects</a>
+            </div>
+
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>If you'd like to get in touch, feel free to reach out via <a href="mailto:your.email@example.com">email</a> or connect on <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>.</p>
+    <section id="contact" class="py-20 bg-white text-gray-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Contact</h2>
+            <p class="text-xl mb-4">Feel free to reach out to me!</p>
+            <div class="flex justify-center space-x-8 text-2xl">
+                <a href="mailto:tafaramutswe@gmail.com" class="hover:text-blue-500"><i class="fas fa-envelope"></i> Email</a>
+                <a href="tel:+263786040494" class="hover:text-green-500"><i class="fas fa-phone"></i> +263786040494</a>
+                <a href="https://linkedin.com/in/tafaramutswe" class="hover:text-blue-700" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="assets/your-cv.pdf" class="hover:text-red-500"><i class="fas fa-file-download"></i> Download CV</a>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+    <footer class="bg-gray-900 p-4 text-center">
+        <p>&copy; 2025 Tafara Mutswe. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
